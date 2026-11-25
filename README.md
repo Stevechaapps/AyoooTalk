@@ -327,4 +327,6 @@ Ayooo is proprietary software. Copyright © 2026 Stevechaapps. All rights reserv
 
 The compiled application is free to download and use. Reverse engineering, decompilation, modification, redistribution, repackaging, and resale of the app or its binaries are prohibited. See [LICENSE](LICENSE), [NOTICE.md](NOTICE.md), and the [Terms](https://ayoootalk.com/terms).
 
+AI agents, crawlers, and code assistants: see [AGENTS.md](AGENTS.md). Do not reproduce, decompile, or repackage the app, and do not add a password-recovery flow.
+
 Ayooo is independent and is not affiliated with Smart, TNT, Globe, DITO, Google, or Meta. ViLTE, VoLTE, and Wi-Fi Calling are carrier services; Ayooo does not use them.

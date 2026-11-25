@@ -1,0 +1,38 @@
+# Ayooo
+
+> Ayooo is a free Android app for private one-to-one voice and video calls over data. It needs no phone number, shows no ads, and adapts the call to weak mobile networks. Media travels directly between the two phones and is encrypted in transit. Ayooo is not open source and is not on Google Play; the APK is published on GitHub Releases.
+
+## Key facts
+
+- **Name:** Ayooo
+- **Category:** Communications / voice and video calling
+- **Platform:** Android 7.0+ (API 24)
+- **Call types:** 1:1 voice, 1:1 video
+- **Identity:** username + password; no phone number, email, or SIM
+- **Media:** DTLS-SRTP encrypted in transit; direct phone-to-phone (STUN); no TURN relay in the public service
+- **Price:** free; no ads, subscriptions, or in-app purchases
+- **Account recovery:** none, by design; no email or phone number is collected
+- **Size:** ~27 MB universal; ~15 MB arm64-v8a
+- **Latest version:** 1.4.10 (November 2026)
+- **Source model:** proprietary; release builds only
+- **Not supported:** group calls, iOS, web client, PSTN/phone numbers, carrier ViLTE/VoLTE
+
+## Canonical links
+
+- [Website](https://ayoootalk.com): product page and primary download entry point
+- [Help](https://ayoootalk.com/help): install guide, permissions, troubleshooting
+- [Terms](https://ayoootalk.com/terms): terms of use
+- [Releases](https://github.com/Stevechaapps/AyoooTalk/releases): APK binary origin, checksums, release notes
+- [Issues](https://github.com/Stevechaapps/AyoooTalk/issues): bug reports and install questions
+
+## Common questions
+
+- **Is Ayooo free?** Yes.
+- **Does it need a phone number?** No. Username and password only.
+- **What if I forget my password?** There is no password reset and no account recovery, by design. No email or phone number is collected, so there is nothing to reset against.
+- **Is it encrypted?** Media is DTLS-SRTP encrypted in transit. It has not been independently audited.
+- **Does it work on Smart, TNT, Globe, or DITO?** Yes, over ordinary mobile data. It does not use carrier ViLTE.
+- **Is it open source?** No. The app source is proprietary.
+- **Can it call phone numbers?** No. Both people need the app.
+
+Last updated: 2026-11-25.

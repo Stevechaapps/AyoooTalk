@@ -1,0 +1,5 @@
+# APKs belong in GitHub Releases, not in git history.
+*.apk
+*.aab
+*.apk.sha1
+release/

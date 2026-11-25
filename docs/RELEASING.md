@@ -201,9 +201,10 @@ Update the site's download links and structured data:
   - `softwareVersion` → `1.4.10`.
   - `sameAs` → `https://github.com/Stevechaapps/AyoooTalk`.
 
-Remove the R2 binding from `worker/wrangler.jsonc`; the APK route no longer
-reads from `env.DOWNLOADS`. The `ayooo-downloads` bucket can be deleted from
-the Cloudflare dashboard once the GitHub download is verified.
+R2 is decommissioned. `worker/wrangler.jsonc` no longer declares a binding and
+`worker/src/index.js` no longer reads `env.DOWNLOADS`. The `ayooo-downloads`
+bucket was deleted on 2026-11-25 after the GitHub redirect was verified; do not
+recreate it.
 
 > **Do this only after the GitHub release is live.** The site's download URL is
 > now a redirect to `releases/latest/download/Ayooo.apk`. If you deploy the
@@ -346,8 +347,9 @@ and communities both punish it.
 - **"No relay, ever":** true for the public STUN-only service, but the code is
   TURN-capable. Keep the public claim scoped to the public service.
 - **Debug signing:** resolve before the first public release (see step 0).
-- **R2 leftovers:** the `DOWNLOADS` binding and the R2 route are removed. Delete
-  the `ayooo-downloads` bucket after the GitHub redirect is verified.
+- **R2 decommissioned:** the `DOWNLOADS` binding and the R2 route are removed,
+  and the `ayooo-downloads` bucket was deleted on 2026-11-25. GitHub Releases
+  is the only APK origin.
 - **`download` attribute:** removed from the site's links because the final
   response is a cross-origin 302 to GitHub. GitHub sends
   `Content-Disposition: attachment` itself.

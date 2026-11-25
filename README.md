@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/license-proprietary-lightgrey?style=flat-square)](LICENSE)
 [![Website](https://img.shields.io/badge/website-ayoootalk.com-2ea44f?style=flat-square)](https://ayoootalk.com)
 
-> **In short:** Ayooo is a free Android app for private 1:1 voice and video calls over data. It needs no phone number, shows no ads, and adapts the call to weak mobile networks. Media travels directly between the two phones and is encrypted in transit. Ayooo is not open source and is not on Google Play; the APK is published in [Releases](https://github.com/Stevechaapps/AyoooTalk/releases).
+> **In short:** Ayooo is a free Android app for private 1:1 voice and video calls over data. It needs no phone number, shows no ads, and adapts the call to weak mobile networks. Media travels directly between the two phones and is encrypted in transit. Ayooo is not open source and is not on Google Play; the APK is published in [Releases](https://github.com/Stevechaapps/AyoooTalk/releases) and linked from [ayoootalk.com](https://ayoootalk.com).
 
 ---
 

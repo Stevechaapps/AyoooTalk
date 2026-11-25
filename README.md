@@ -27,7 +27,7 @@
 | **Media encryption** | DTLS-SRTP, encrypted in transit |
 | **Price** | Free; no ads, no subscriptions, no in-app purchases |
 | **Account recovery** | None, by design — no email or phone number is collected |
-| **Size** | ~27 MB universal; ~15 MB arm64 |
+| **Size** | ~27 MB universal |
 | **Latest version** | 1.4.10 (November 2026) |
 | **Source** | Proprietary; this repository hosts release builds only |
 | **Website** | [ayoootalk.com](https://ayoootalk.com) |
@@ -39,8 +39,6 @@
 | Build | Best for | Size | Download |
 | --- | --- | --- | --- |
 | **Universal** | Almost every Android phone. Start here if unsure. | ~27 MB | [**Ayooo.apk**](https://github.com/Stevechaapps/AyoooTalk/releases/latest/download/Ayooo.apk) |
-| arm64-v8a | Most phones made since ~2017 | ~15 MB | [Ayooo-arm64-v8a.apk](https://github.com/Stevechaapps/AyoooTalk/releases/latest/download/Ayooo-arm64-v8a.apk) |
-| armeabi-v7a | Older 32-bit phones | ~13 MB | [Ayooo-armeabi-v7a.apk](https://github.com/Stevechaapps/AyoooTalk/releases/latest/download/Ayooo-armeabi-v7a.apk) |
 
 Prefer the website? [ayoootalk.com](https://ayoootalk.com) is the primary download
 page. Its Download button keeps the branded
@@ -280,7 +278,7 @@ No. Ayooo is free to use, but the source is proprietary. This repository hosts r
 
 ### How big is the app?
 
-About 27 MB for the universal APK, about 16 MB for the arm64 build.
+About 27 MB for the universal APK.
 
 ### Which Android versions are supported?
 
@@ -297,7 +295,7 @@ Android 7.0 (API 24) and newer.
 - **Push:** Firebase Cloud Messaging for incoming calls when the app is not running.
 - **NAT traversal:** STUN (Cloudflare and Google). The public service does not run a TURN relay.
 - **Diagnostics:** RTT, jitter, loss, bitrate, relay/direct path, and an E-model MOS estimate.
-- **Release builds:** Universal APK plus split-per-ABI (arm64-v8a, armeabi-v7a). Release builds are R8-minified and Dart-obfuscated; mapping and symbol files stay private.
+- **Release builds:** One universal APK. Release builds are R8-minified and Dart-obfuscated; mapping and symbol files stay private.
 
 ---
 

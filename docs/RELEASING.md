@@ -54,28 +54,23 @@ flutter pub get
 
 # Dart AOT obfuscation. The symbol files are the key back to readable stack
 # traces: keep them private, never upload them.
-flutter build apk --release --obfuscate --split-debug-info=build/symbols/universal
-flutter build apk --release --split-per-abi --obfuscate --split-debug-info=build/symbols/split
+flutter build apk --release --obfuscate --split-debug-info=build/symbols
 ```
 
 Release builds also run R8 (Java/Kotlin minify) and resource shrinking; the
 keep rules live in `android/app/proguard-rules.pro`. Archive the R8 mapping
-(`app/build/app/outputs/mapping/release/mapping.txt`) and both symbol
-directories in a private place. They de-obfuscate crash reports and must never
+(`app/build/app/outputs/mapping/release/mapping.txt`) and the symbol
+directory in a private place. They de-obfuscate crash reports and must never
 be published with the APK.
 
 Outputs in `app/build/app/outputs/flutter-apk/`:
 
 | Built file | Rename to | Purpose |
 | --- | --- | --- |
-| `app-release.apk` | `Ayooo.apk` | Universal; recommended download |
-| `app-arm64-v8a-release.apk` | `Ayooo-arm64-v8a.apk` | Most phones since ~2017 |
-| `app-armeabi-v7a-release.apk` | `Ayooo-armeabi-v7a.apk` | Older 32-bit phones |
+| `app-release.apk` | `Ayooo.apk` | Universal; the only published APK |
 
 `x86_64` is deliberately excluded from packaging in
-`app/android/app/build.gradle.kts`, so the x86_64 split artifact is broken and
-must not be published. Flutter still emits it during `--split-per-abi`; ignore
-it.
+`app/android/app/build.gradle.kts`, and no split-per-ABI APKs are published.
 
 **The asset names must stay identical across releases.** The download links in
 the README and on the site use:
@@ -95,8 +90,6 @@ $out = "..\release\v$v"
 New-Item -ItemType Directory -Force $out | Out-Null
 
 Copy-Item build\app\outputs\flutter-apk\app-release.apk          "$out\Ayooo.apk"
-Copy-Item build\app\outputs\flutter-apk\app-arm64-v8a-release.apk "$out\Ayooo-arm64-v8a.apk"
-Copy-Item build\app\outputs\flutter-apk\app-armeabi-v7a-release.apk "$out\Ayooo-armeabi-v7a.apk"
 ```
 
 Generate SHA-256 checksums with LF line endings, so `sha256sum -c` works on
@@ -110,9 +103,9 @@ $lines = Get-ChildItem "$out\*.apk" | ForEach-Object {
 [IO.File]::WriteAllText("$out\SHA256SUMS.txt", ($lines -join "`n") + "`n")
 ```
 
-Test before publishing: install the universal and the arm64 builds on a real
-phone, complete a call, check the version in Settings, and confirm the in-app
-update card. On the signup screen, confirm the no-recovery warning is visible,
+Test before publishing: install the universal APK on a real phone, complete a
+call, check the version in Settings, and confirm the in-app update card. On the
+signup screen, confirm the no-recovery warning is visible,
 `Create account` stays disabled until the acknowledgement is ticked, and the
 release build launches with R8/obfuscation enabled.
 
@@ -143,8 +136,6 @@ git push -u origin main
 ```powershell
 gh release create v1.4.10 `
   ..\release\v1.4.10\Ayooo.apk `
-  ..\release\v1.4.10\Ayooo-arm64-v8a.apk `
-  ..\release\v1.4.10\Ayooo-armeabi-v7a.apk `
   ..\release\v1.4.10\SHA256SUMS.txt `
   --title "Ayooo 1.4.10 — free encrypted calls for Android" `
   --notes-file docs/release-notes/v1.4.10.md
@@ -331,8 +322,8 @@ and communities both punish it.
 ## 8. Measure
 
 - **GitHub → Insights → Traffic:** views, clones, referrers.
-- **Release asset download counts:** universal vs arm64 tells you how technical
-  your audience is.
+- **Release asset download counts:** the universal APK is the single headline
+  number.
 - **Site analytics:** Cloudflare Web Analytics is enough; keep it off the app.
 - **Issues:** install failures and OEM battery problems are the real support
   load. Add them to the help page as they recur.

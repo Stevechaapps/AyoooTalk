@@ -12,7 +12,7 @@
 - **Media:** DTLS-SRTP encrypted in transit; direct phone-to-phone (STUN); no TURN relay in the public service
 - **Price:** free; no ads, subscriptions, or in-app purchases
 - **Account recovery:** none, by design; no email or phone number is collected
-- **Size:** ~27 MB universal; ~15 MB arm64-v8a
+- **Size:** ~27 MB universal APK
 - **Latest version:** 1.4.10 (November 2026)
 - **Source model:** proprietary; release builds only
 - **Not supported:** group calls, iOS, web client, PSTN/phone numbers, carrier ViLTE/VoLTE

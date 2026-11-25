@@ -6,7 +6,7 @@ Release notes are published with each build on the
 ## 1.4.10 — 2026-11-25
 
 - First public GitHub release.
-- Universal APK plus split-per-ABI builds (arm64-v8a, armeabi-v7a).
+- Universal APK (one file for every ARM phone).
 - Release builds now run R8/minification and Dart obfuscation; mapping and
   symbol files are archived privately for crash reports.
 - Signup now states plainly that there is no password or account recovery and

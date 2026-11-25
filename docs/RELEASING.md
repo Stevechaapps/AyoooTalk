@@ -24,6 +24,11 @@ keytool -printcert -jarfile .\Ayooo.apk
 
 If the certificate says `CN=Android Debug`, the build is debug-signed.
 
+> Checked 2026-11-25: the published 1.4.10 APK is signed with `CN=Ayooo`
+> (SHA-256 `d09b7b079836a43e64fdba997323d6674978bf55df8e131799eb054f4aa3c328`).
+> It is not debug-signed. Keep using this key so existing installs update in
+> place.
+
 Options:
 
 - **Rotate to a release key now.** Best for trust and for any future Play

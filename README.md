@@ -4,7 +4,7 @@
 
 **One-to-one calls over Wi-Fi, 4G, or 5G. No phone number, no ads, no ad or analytics SDKs, no call recording.**
 
-[![Download Ayooo.apk](https://img.shields.io/badge/Download-Ayooo.apk-2ea44f?style=for-the-badge&logo=android)](https://github.com/Stevechaapps/AyoooTalk/releases/latest/download/Ayooo.apk)
+[![Download from ayoootalk.com](https://img.shields.io/badge/Download-ayoootalk.com-2ea44f?style=for-the-badge&logo=android)](https://ayoootalk.com)
 [![Latest release](https://img.shields.io/github/v/release/Stevechaapps/AyoooTalk?style=flat-square&label=release)](https://github.com/Stevechaapps/AyoooTalk/releases)
 [![Platform](https://img.shields.io/badge/platform-Android%207%2B-3ddc84?style=flat-square&logo=android)](https://ayoootalk.com/help)
 [![License](https://img.shields.io/badge/license-proprietary-lightgrey?style=flat-square)](LICENSE)
@@ -36,15 +36,10 @@
 
 ## Download
 
-| Build | Best for | Size | Download |
-| --- | --- | --- | --- |
-| **Universal** | Almost every Android phone. Start here if unsure. | ~27 MB | [**Ayooo.apk**](https://github.com/Stevechaapps/AyoooTalk/releases/latest/download/Ayooo.apk) |
-
-Prefer the website? [ayoootalk.com](https://ayoootalk.com) is the primary download
-page. Its Download button keeps the branded
-`https://ayoootalk.com/downloads/ayooo.apk` URL and resolves to the latest asset
-in this repository, so existing links and QR codes keep working. This repository
-is the binary origin; the site is the front door.
+- **Primary:** [ayoootalk.com](https://ayoootalk.com) — the site is the front door. Its
+  branded APK URL redirects to the latest release here, so links and QR codes keep working.
+- **Direct:** [Ayooo.apk](https://github.com/Stevechaapps/AyoooTalk/releases/latest/download/Ayooo.apk) —
+  universal, ~27 MB. Almost every Android phone.
 
 Every release also ships `SHA256SUMS.txt`. Verify the file before installing:
 
@@ -147,7 +142,7 @@ Opus in-band FEC and DTX are enabled in every profile. Rescue mode steps the out
 
 ## Install on Android
 
-1. **Download** `Ayooo.apk` from the link at the top of this page.
+1. **Download** `Ayooo.apk` from [ayoootalk.com](https://ayoootalk.com).
 2. **Open it from Files or File Manager.** Some phones block the browser's own installer; the file manager usually works.
 3. **Allow installs from this source** when Android asks. This is the standard warning for every app installed outside a store.
 4. **Create an account.** Username: 3–20 characters, `a-z`, `0-9`, `_`. Password of your choice. **There is no password recovery** — no email or phone number is collected, so save the password in a password manager.
